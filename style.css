@@ -1,0 +1,331 @@
+/* General Styles */
+:root {
+    --bg-color: #0B132B;      /* Deep blue background */
+    --primary-color: #1C2541; /* Slightly lighter blue for cards */
+    --secondary-color: #3A506B;/* Muted blue for tags */
+    --accent-color: #5BC0BE;  /* Teal accent */
+    --text-color: #F0F0F0;      /* Soft white text */
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(11, 19, 43, 0.85); /* Semi-transparent version of bg-color */
+    padding: 1rem 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.8));
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Card Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.card h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-item {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: var(--accent-color);
+    color: #0B132B;
+}
+
+/* Projects Section */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.project-tech span {
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #0B132B;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #4aa3a1; /* A slightly darker accent */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 10%;
+    background-color: #080D1B; /* Darker than background for separation */
+    margin-top: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        display: none; /* Simple hiding for mobile, can be replaced with a hamburger menu */
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 60px 5%;
+    }
+}
+
+/* === STYLES FOR PROFILE PICTURE === */
+
+/* Updated Hero Section Layout */
+.hero {
+    min-height: 100vh;
+    height: auto;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* This makes the image a circle */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    border: 7px solid var(--accent-color);
+    box-shadow: 0 0 25px rgba(91, 192, 190, 0.4); /* Adds a subtle glow */
+}
+
+/* Make it responsive on smaller screens */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column-reverse; /* Stacks the image on top of the text */
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* === STYLES FOR ATTRACTION === */
+
+/* 1. Animated Gradient Background */
+body {
+    background: linear-gradient(315deg, #0b132b, #1c2541, #3a506b);
+    background-size: 400% 400%;
+    animation: animateGradient 15s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 2. Gradient Text for Name */
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent-color), #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* 3. Floating Image Animation */
+.hero-image {
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* 4. Social Links Styling */
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
